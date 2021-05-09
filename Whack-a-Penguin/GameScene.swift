@@ -61,7 +61,7 @@ class GameScene: SKScene {
 				node.xScale = 0.85
 				node.yScale = 0.85
 				score += 1
-				run(SKAction.playSoundFileNamed("whackGood.caf", waitForCompletion: false))
+				run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
 			}
 		}
 	}
