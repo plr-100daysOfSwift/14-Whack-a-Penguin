@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA00F6A526489EDE0017D7E9 /* gameOver.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA00F6A426489EDE0017D7E9 /* gameOver.caf */; };
 		DA5D5791264756920031678F /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA5D578F264756920031678F /* whack.caf */; };
 		DA5D5792264756920031678F /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA5D5790264756920031678F /* whackBad.caf */; };
 		DA5D579426477DED0031678F /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D579326477DED0031678F /* WhackSlot.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA00F6A426489EDE0017D7E9 /* gameOver.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameOver.caf; sourceTree = "<group>"; };
 		DA5D578F264756920031678F /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		DA5D5790264756920031678F /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
 		DA5D579326477DED0031678F /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				DAAB99B226474C74009FF7A9 /* Info.plist */,
 				DA5D578F264756920031678F /* whack.caf */,
 				DA5D5790264756920031678F /* whackBad.caf */,
+				DA00F6A426489EDE0017D7E9 /* gameOver.caf */,
 				DA5D579326477DED0031678F /* WhackSlot.swift */,
 			);
 			path = "Whack-a-Penguin";
@@ -136,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA00F6A526489EDE0017D7E9 /* gameOver.caf in Resources */,
 				DAAB99AF26474C73009FF7A9 /* Main.storyboard in Resources */,
 				DA5D5791264756920031678F /* whack.caf in Resources */,
 				DAAB99A626474C73009FF7A9 /* GameScene.sks in Resources */,

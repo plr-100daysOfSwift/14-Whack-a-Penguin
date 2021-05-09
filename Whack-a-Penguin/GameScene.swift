@@ -86,6 +86,9 @@ class GameScene: SKScene {
 			gameOver.zPosition = 1
 			addChild(gameOver)
 
+			let gameOverAudio = SKAction.playSoundFileNamed("gameOver", waitForCompletion: false)
+			run(gameOverAudio)
+
 			return
 		}
 
