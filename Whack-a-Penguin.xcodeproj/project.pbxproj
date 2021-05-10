@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA00F6A526489EDE0017D7E9 /* gameOver.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA00F6A426489EDE0017D7E9 /* gameOver.caf */; };
+		DA00F6A72648A2310017D7E9 /* HitParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = DA00F6A62648A2310017D7E9 /* HitParticle.sks */; };
+		DA00F6A92648A2C20017D7E9 /* MudParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = DA00F6A82648A2C20017D7E9 /* MudParticle.sks */; };
 		DA5D5791264756920031678F /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA5D578F264756920031678F /* whack.caf */; };
 		DA5D5792264756920031678F /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA5D5790264756920031678F /* whackBad.caf */; };
 		DA5D579426477DED0031678F /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D579326477DED0031678F /* WhackSlot.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		DA00F6A426489EDE0017D7E9 /* gameOver.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameOver.caf; sourceTree = "<group>"; };
+		DA00F6A62648A2310017D7E9 /* HitParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HitParticle.sks; sourceTree = "<group>"; };
+		DA00F6A82648A2C20017D7E9 /* MudParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MudParticle.sks; sourceTree = "<group>"; };
 		DA5D578F264756920031678F /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		DA5D5790264756920031678F /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
 		DA5D579326477DED0031678F /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA00F6AA2648A2CB0017D7E9 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				DA00F6A62648A2310017D7E9 /* HitParticle.sks */,
+				DA00F6A82648A2C20017D7E9 /* MudParticle.sks */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		DAAB999726474C73009FF7A9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 				DA5D5790264756920031678F /* whackBad.caf */,
 				DA00F6A426489EDE0017D7E9 /* gameOver.caf */,
 				DA5D579326477DED0031678F /* WhackSlot.swift */,
+				DA00F6AA2648A2CB0017D7E9 /* Particles */,
 			);
 			path = "Whack-a-Penguin";
 			sourceTree = "<group>";
@@ -139,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA00F6A92648A2C20017D7E9 /* MudParticle.sks in Resources */,
 				DA00F6A526489EDE0017D7E9 /* gameOver.caf in Resources */,
 				DAAB99AF26474C73009FF7A9 /* Main.storyboard in Resources */,
 				DA5D5791264756920031678F /* whack.caf in Resources */,
@@ -146,6 +161,7 @@
 				DAAB99B926474E78009FF7A9 /* README.md in Resources */,
 				DAAB99B126474C74009FF7A9 /* Assets.xcassets in Resources */,
 				DA5D5792264756920031678F /* whackBad.caf in Resources */,
+				DA00F6A72648A2310017D7E9 /* HitParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
