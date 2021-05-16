@@ -115,7 +115,7 @@ class GameScene: SKScene {
 		finalScore.text = "You scored \(score)!"
 		finalScore.fontSize = 48
 		finalScore.position = CGPoint(x: 512, y: 250)
-		gameOver.zPosition = 10
+		finalScore.zPosition = 1
 		addChild(finalScore)
 
 		let gameOverAudio = SKAction.playSoundFileNamed("gameOver", waitForCompletion: false)
