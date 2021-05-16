@@ -11,6 +11,7 @@ import SpriteKit
 class WhackSlot: SKNode {
 
 	var charNode: SKSpriteNode!
+	var mud: SKEmitterNode!
 	var isVisible = false
 	var isHit = false
 
@@ -32,6 +33,12 @@ class WhackSlot: SKNode {
 
 		addChild(cropNode)
 
+		mud = SKEmitterNode(fileNamed: "MudParticle")
+		mud.position = charNode.position
+		mud.position.y += 90
+		mud.isHidden = true
+		addChild(mud)
+
 	}
 
 	func show(hideTime: Double) {
@@ -40,17 +47,6 @@ class WhackSlot: SKNode {
 		charNode.xScale = 1
 		charNode.yScale = 1
 
-		if let mud = SKEmitterNode(fileNamed: "MudParticle") {
-			mud.position = charNode.position
-			mud.position.y += 90
-			addChild(mud)
-		}
-
-		charNode.run(SKAction.moveBy(x: 0, y: 80, duration: 0.05))
-		isVisible = true
-		isHit = false
-
-
 		if Int.random(in: 0...2)  == 0 {
 			charNode.texture = SKTexture(imageNamed: "penguinGood")
 			charNode.name = "charFriend"
@@ -58,6 +54,13 @@ class WhackSlot: SKNode {
 			charNode.texture = SKTexture(imageNamed: "penguinEvil")
 			charNode.name = "charEnemy"
 		}
+
+		charNode.run(SKAction.moveBy(x: 0, y: 80, duration: 0.05))
+		isVisible = true
+		isHit = false
+
+		mud.resetSimulation()
+		mud.isHidden = false
 
 		DispatchQueue.main.asyncAfter(deadline: .now() + hideTime * 3.5) { [weak self] in
 			self?.hide()
@@ -68,6 +71,7 @@ class WhackSlot: SKNode {
 		if !isVisible { return }
 		charNode.run(SKAction.moveBy(x: 0, y: -80, duration: 0.05))
 		isVisible = false
+		mud.isHidden = true
 	}
 
 	func hit() {
