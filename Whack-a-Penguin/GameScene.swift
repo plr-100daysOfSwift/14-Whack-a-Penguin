@@ -76,25 +76,8 @@ class GameScene: SKScene {
 
 	func createEnemy() {
 		numRounds += 1
-		if numRounds > 30 {
-			for slot in slots {
-				slot.hide()
-			}
-
-			let gameOver = SKSpriteNode(imageNamed: "gameOver")
-			gameOver.position = CGPoint(x: 512, y: 384)
-			gameOver.zPosition = 1
-			addChild(gameOver)
-
-			let finalScore = SKLabelNode(fontNamed: "Chalkduster")
-			finalScore.text = "You scored \(score)!"
-			finalScore.fontSize = 48
-			finalScore.position = CGPoint(x: 512, y: 250)
-			addChild(finalScore)
-
-			let gameOverAudio = SKAction.playSoundFileNamed("gameOver", waitForCompletion: false)
-			run(gameOverAudio)
-
+		guard numRounds <= 30 else {
+			endGame()
 			return
 		}
 
@@ -117,4 +100,27 @@ class GameScene: SKScene {
 		}
 
 	}
+
+	fileprivate func endGame() {
+		for slot in slots {
+			slot.hide()
+		}
+
+		let gameOver = SKSpriteNode(imageNamed: "gameOver")
+		gameOver.position = CGPoint(x: 512, y: 384)
+		gameOver.zPosition = 1
+		addChild(gameOver)
+
+		let finalScore = SKLabelNode(fontNamed: "Chalkduster")
+		finalScore.text = "You scored \(score)!"
+		finalScore.fontSize = 48
+		finalScore.position = CGPoint(x: 512, y: 250)
+		gameOver.zPosition = 10
+		addChild(finalScore)
+
+		let gameOverAudio = SKAction.playSoundFileNamed("gameOver", waitForCompletion: false)
+		run(gameOverAudio)
+
+	}
+
 }
